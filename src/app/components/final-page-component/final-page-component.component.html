@@ -1,0 +1,107 @@
+<!--   <navbar-component></navbar-component> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <section class="section">
+      <div class="container">
+        <div class="columns is-vcentered is-multiline">
+          <div class="column is-6-tablet is-3-desktop">
+            <h2 class="is-size-4-mobile is-size-2-desktop subtitle">
+              {{phone.title}}
+            </h2>
+            <ul *ngFor="let in of counter(8) ;let i = index">
+              <li class="key_specs" *ngIf="key_specs_values[i]!='-'">{{key_specs_keys[i]}} : {{key_specs_values[i]}}</li>
+            </ul>
+          </div>
+          <div class="column is-6-tablet is-5-desktop has-text-centered is-hcentered phone_img"
+          style = "background: url({{phone.img}});
+          height:500px;
+          width:400px;
+          background-repeat:no-repeat;
+          background-position:center;
+          background-size:contain;
+          margin:auto;">
+          </div>
+          <div class="column is-12-tablet is-4-desktop">
+            <div class="is-size-4 mb-4">Rs.{{specs[3]}}</div>
+            <button class="button is-primary">
+            <a href="{{phone.buy}}"> Buy here</a> 
+            </button>
+            <div>
+
+              <!-- <div *ngFor="let in of counter(6) ;let i = index">
+                <circle-progress [percent]="(ratings[i])*10" [maxPercent]="100" [radius]="42" [outerStrokeWidth]="5" [innerStrokeWidth]="2"
+                  [outerStrokeColor]="'green'" [innerStrokeWidth]="0" [animation]="true" [animationDuration]="300"
+                  [titleFontWeight]="'600'" [subtitleFontSize]="'13'" [subtitleFontWeight]="'500'" [showUnits]="false"
+                  [subtitle]="ratings_headings[i]" [title]="ratings[i].toString()" [subtitleColor]="'black'"
+                ></circle-progress>
+              </div> -->
+            </div>
+            </div>
+        </div>
+      </div>
+      <br><br>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-8 is-variable">
+          <div class="column is-7-tablet">
+            <div class="tabs is-boxed">
+              <ul>
+                <li class="is-active" data-target="product-details">
+                  <a>Product Details</a>
+                </li>
+              </ul>
+            </div>
+            <div class="px-2" id="tab-content">
+              <div id="product-details">
+                <h3 class="is-size-5 title">Product Details</h3>
+                  <table class="basic-table table table-hover container">
+                    <tbody>
+                      <tr *ngFor='let in of counter(78) ;let i = index'>
+                        <td *ngIf="specs[i]!='-'">{{category[i]}}</td>
+                        <td *ngIf="specs[i]!='-'">{{specs[i]}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                
+              </div>
+            </div>
+          </div>
+          <div class="column is-5-tablet">
+            <div class="message">
+              <div class="message-header">
+                <p>Summary of {{phone.title}}</p>
+              </div>
+              <div class="message-body">
+                <p>
+                  {{summary}}
+                </p>
+              </div>
+            </div>
+            <br><br>
+            <div class="message">
+              <div class="message-header">
+                <p>PROS</p>
+              </div>
+              <div class="message-body">
+                <ul style="list-style-type: disc;" *ngFor="let pro of pros">
+                  <li>{{pro}}</li>
+                </ul>
+              </div>
+            </div>
+            <br><br>
+            <div class="message">
+              <div class="message-header">
+                <p>CONS</p>
+              </div>
+              <div class="message-body">
+                <ul style="list-style-type: disc;" *ngFor="let con of cons">
+                  <li>{{con}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <footer-component></footer-component> -->
+

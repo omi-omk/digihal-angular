@@ -1,0 +1,16 @@
+*{
+    color:white;
+}
+.picsum-img-wrapper{
+    text-align: center;
+}
+img{
+    width:40%;
+    
+    
+}
+.sr-only{
+    color:white;
+    display: none;
+}
+

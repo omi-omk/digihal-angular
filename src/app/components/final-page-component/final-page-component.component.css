@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+a{
+    text-decoration: none;
+    color:white;
+}
+.key_specs{
+    list-style-type: disc;
+    font-size: 17px;
+    line-height:26px;
+}
+.progress{
+    overflow:hidden;
+    display:inline;
+    
+}
+.message{
+    line-height:25px;
+    letter-spacing:0.5px;;
+}
+.message-header{
+    line-height:25px;
+    letter-spacing:0.5px;
+    font-size: 20px;
+}

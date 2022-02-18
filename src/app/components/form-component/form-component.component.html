@@ -1,0 +1,164 @@
+<div class="container col-md-4">
+    <form #data = "ngForm" (ngSubmit)="submit(data)">
+        <div class="form-group">
+            <pre></pre>
+            <label for="email1">Email address</label>
+            <pre></pre>
+            <input #email="ngModel"
+            name="email" 
+            type="email" 
+            class="form-control" 
+            [class.is-invalid]="email.invalid && email.touched"
+            pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+            id="email" 
+            placeholder="Enter email"
+            ngModel
+            required>
+        </div>
+        <div *ngIf="email.errors && email.touched">
+            <div class="alert alert-danger" *ngIf="email.errors?.['required']">Email is required</div>
+            <div class="alert alert-danger" *ngIf="email.errors?.['pattern']">Please provide a valid email address</div>
+        </div>
+        <hr>
+        <div>
+            <p>On the scale of 1-10 enter your requirements for the following:</p>
+        </div>
+        <div class="form-group">
+            <label for="design">Design:</label>
+            <br>
+            <mat-slider class="container col-md-6 form-control"
+            thumbLabel
+            tickInterval="10"
+            #design = "ngModel"
+            step="1"
+            min="1"
+            max="10"
+            aria-label="units"
+            name="design"
+            id="design"
+            ngModel
+            value = 1
+            required></mat-slider>
+
+        </div>
+        <div class="form-group">
+            <label for="display">Display:</label>
+            <br>
+            <mat-slider class="container col-md-6 form-control"
+            thumbLabel
+            tickInterval="10"
+            #display = "ngModel"
+            step="1"
+            min="0"
+            max="10"
+            aria-label="units"
+            name="display"
+            id="display"
+            ngModel
+            value = 1
+            required></mat-slider>
+        </div>
+        <div class="form-group">
+            <label for="software">Software:</label>
+            <br>
+            <mat-slider class="container col-md-6 form-control"
+            thumbLabel
+            tickInterval="10"
+            #software = "ngModel"
+            step="1"
+            min="1"
+            max="10"
+            aria-label="units"
+            name="software"
+            id="software"
+            ngModel
+            value = 1
+            required></mat-slider>
+        </div>
+        <div class="form-group">
+            <label for="performance">Performance:</label>
+            <br>
+            <mat-slider class="container col-md-6 form-control"
+            thumbLabel
+            tickInterval="10"
+            #performance = "ngModel"
+            step="1"
+            min="1"
+            max="10"
+            aria-label="units"
+            name="performance"
+            id="performance"
+            ngModel
+            value = 1
+            required></mat-slider>
+        </div>
+        <div class="form-group">
+            <label for="battery">Battery life:</label>
+            <br>
+            <mat-slider class="container col-md-6 form-control"
+            thumbLabel
+            tickInterval="10"
+            #battery = "ngModel"
+            step="1"
+            min="1"
+            max="10"
+            aria-label="units"
+            name="battery"
+            id="battery"
+            ngModel
+            value = 1
+            required></mat-slider>
+        </div>
+        <div class="form-group">
+            <label for="camera">Camera:</label>
+            <br>
+            <mat-slider class="container col-md-6 form-control"
+            thumbLabel
+            tickInterval="10"
+            #camera = "ngModel"
+            step="1"
+            min="1"
+            max="10"
+            aria-label="units"
+            name="camera"
+            id="camera"
+            ngModel
+            value = 1
+            required></mat-slider>
+        </div>
+        <hr>
+        <br>
+        <div class="form-group">
+            <label for="price">Price: </label>
+            <br>
+            <input type="text"
+            #price = ngModel 
+            name="price" 
+            id="price" 
+            class="form-control" 
+            placeholder="Enter price"
+            pattern="^[0-9]*$"
+            ngModel
+            required>
+        </div>
+        <div *ngIf="price.errors && price.touched">
+            <div class="alert alert-danger" *ngIf="price.errors?.['required']">Price is required</div>
+            <div class="alert alert-danger" *ngIf="price.errors?.['pattern']">Enter a valid price</div>
+        </div>
+        <pre></pre>
+        <div 
+        cdkDropList 
+        cdkDropListOrientation="horizontal" 
+        class="example-list" 
+        (cdkDropListDropped)="drop($event)">
+            <div 
+            class="example-box container-fluid" 
+            *ngFor="let parameter of parameters" 
+            cdkDrag>{{parameter}}</div>
+        </div>
+        <pre></pre>
+        <button type="submit" [disabled]="!data.valid" class="btn btn-primary">Submit</button>
+  
+    </form>
+    <h1>{{response | json}}</h1>
+</div>
