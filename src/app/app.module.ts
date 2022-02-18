@@ -19,6 +19,7 @@ import { ImageGalleryComponentComponent } from './components/home/image-gallery-
 import { ImageSliderComponentComponent } from './components/home/image-slider-component/image-slider-component.component';
 import { HomePageComponentComponent } from './components/home-page-component/home-page-component.component';
 import { FinalPageComponentComponent } from './components/final-page-component/final-page-component.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
@@ -33,7 +34,8 @@ import { FinalPageComponentComponent } from './components/final-page-component/f
     ImageGalleryComponentComponent,
     ImageSliderComponentComponent,
     HomePageComponentComponent,
-    FinalPageComponentComponent
+    FinalPageComponentComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
