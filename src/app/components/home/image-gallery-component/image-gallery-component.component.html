@@ -2,21 +2,38 @@
     <div class="d-flex flex-row flex-wrap justify-content-center">
         
         <div *ngFor="let image of images;let i=index" class="d-flex flex-column">
-           <div class="hoverEffect">
+           <div *ngIf="captions[i][0]=='Smartphones'" routerLink="../input" class="hoverEffect" else notSmartphone>
             <img 
             src="{{image[0]}}" 
             class="img-fluid image">  <div class="overlay">
              <div class="text">{{captions[i][0]}}</div>
            </div>
            </div>
+            <div *ngIf="captions[i][0]!='Smartphones'" routerLink="../**" class="hoverEffect" >
+                <img 
+                src="{{image[0]}}" 
+                class="img-fluid image">  <div class="overlay">
+                 <div class="text">{{captions[i][0]}}</div>
+               </div>
+            </div>
+
+    
           
-            <div class="hoverEffect">
+            <div *ngIf="captions[i][1]=='Smartphones'" routerLink="../input" class="hoverEffect">
                 <img 
             src="{{image[1]}}" 
             class="img-fluid image">  <div class="overlay">
                 <div class="text">{{captions[i][1]}}</div>
               </div>
             </div>
+            <div *ngIf="captions[i][1]!='Smartphones'" routerLink="../**" class="hoverEffect" >
+                <img 
+                src="{{image[1]}}" 
+                class="img-fluid image">  <div class="overlay">
+                <div class="text">{{captions[i][1]}}</div>
+                </div>
+            </div>
+         
             
         </div>
     </div>
