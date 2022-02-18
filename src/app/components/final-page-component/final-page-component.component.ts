@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductDataService } from 'src/app/services/product-data.service';
 
 @Component({
   selector: 'app-final-page-component',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./final-page-component.component.css']
 })
 export class FinalPageComponentComponent implements OnInit {
+  public product: any;
   phone={'img':'https://i.gadgets360cdn.com/products/large/1536782796_635_iphone_xr.jpg',
         'title':'Apple iPhone XR',
         'buy':'https://pricee.com/api/redirect/t.php?utm_source=PRICE-IN-INDIA&itemid=2-b09b3q11h1&pgtyp=product&pgcat=Mobiles'}
@@ -42,9 +44,12 @@ ratings_headings=['Design','Display','Software','Performance','Battery','Camera'
 counter(i: number) {
   return new Array(i);
 }
-  constructor() { }
+  constructor(private _service: ProductDataService) { }
 
   ngOnInit(): void {
+    
+    this.product = this._service.getProduct()
+    
   }
 
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { ProductDataService } from 'src/app/services/product-data.service';
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-form-component',
   templateUrl: './form-component.component.html',
@@ -8,7 +10,7 @@ import { ProductDataService } from 'src/app/services/product-data.service';
 })
 export class FormComponentComponent implements OnInit {
   public response:any;
-  constructor(private _service:ProductDataService) { }
+  constructor(private _service:ProductDataService, private route:Router) { }
 
   ngOnInit(): void {
   }
@@ -16,7 +18,11 @@ export class FormComponentComponent implements OnInit {
   public findProduct(product: any){
     this._service.find(product).subscribe((res: any)=>{
       this.response =  res;
+      this._service.setProduct(this.response);
+      this.route.navigate(['../output']);
     })
+    
+    
 }
 
 parameters = [
