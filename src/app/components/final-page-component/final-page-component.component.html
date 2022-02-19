@@ -5,14 +5,14 @@
         <div class="columns is-vcentered is-multiline">
           <div class="column is-6-tablet is-3-desktop">
             <h2 class="is-size-4-mobile is-size-2-desktop subtitle">
-              {{phone.title}}
+              {{product.mobiles}}
             </h2>
             <ul *ngFor="let in of counter(8) ;let i = index">
-              <li class="key_specs" *ngIf="key_specs_values[i]!='-'">{{key_specs_keys[i]}} : {{key_specs_values[i]}}</li>
+              <li class="key_specs" *ngIf="key_specs_values[i]!=undefined">{{key_specs_keys[i]}} : {{key_specs_values[i]}}</li>
             </ul>
           </div>
           <div class="column is-6-tablet is-5-desktop has-text-centered is-hcentered phone_img"
-          style = "background: url({{phone.img}});
+          style = "background: url({{product.img_links}});
           height:500px;
           width:400px;
           background-repeat:no-repeat;
@@ -21,9 +21,9 @@
           margin:auto;">
           </div>
           <div class="column is-12-tablet is-4-desktop">
-            <div class="is-size-4 mb-4">Rs.{{specs[3]}}</div>
+            <div class="is-size-4 mb-4">Rs.{{product.b_Price}}</div>
             <button class="button is-primary">
-            <a href="{{phone.buy}}"> Buy here</a> 
+            <a href="{{product.best_buy_links}}"> Buy here</a> 
             </button>
             <div>
 
@@ -57,8 +57,8 @@
                   <table class="basic-table table table-hover container">
                     <tbody>
                       <tr *ngFor='let in of counter(78) ;let i = index'>
-                        <td *ngIf="specs[i]!='-'">{{category[i]}}</td>
-                        <td *ngIf="specs[i]!='-'">{{specs[i]}}</td>
+                        <td *ngIf="specs[i]!=undefined">{{category[i]}}</td>
+                        <td *ngIf="specs[i]!=undefined">{{specs[i]}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -69,11 +69,11 @@
           <div class="column is-5-tablet">
             <div class="message">
               <div class="message-header">
-                <p>Summary of {{phone.title}}</p>
+                <p>Summary of {{product.mobiles}}</p>
               </div>
               <div class="message-body">
                 <p>
-                  {{summary}}
+                  {{product.Summary}}
                 </p>
               </div>
             </div>
