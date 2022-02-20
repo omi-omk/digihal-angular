@@ -28,8 +28,8 @@ key_specs_keys=['Display','Processor','Front Camera','Rear Camera','RAM','Storag
 key_specs_values:any[]=[];
 pros = [];
 cons = [];
-ratings=[8,8,9,10,9,9];
-ratings_headings=['Design','Display','Software','Performance','Battery','Camera'];
+//ratings=[8,8,9,10,9,9];
+//ratings_headings=['Design','Display','Software','Performance','Battery','Camera'];
 
 
 counter(i: number) {
@@ -47,15 +47,15 @@ counter(i: number) {
     {
       key = key.split(' ').join('_');
       key = 'k_'+key;
-      console.log(key);
+      //console.log(key);
       this.key_specs_values.push(this.product[key]);
     }
-    console.log(this.key_specs_values);
+    //console.log(this.key_specs_values);
 
     for(let key of this.category)
     {
       key = key.split(' ').join('_');
-      console.log(key);
+      //console.log(key);
       this.specs.push(this.product[key]);
     }
     

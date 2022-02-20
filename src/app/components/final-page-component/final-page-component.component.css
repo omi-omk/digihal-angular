@@ -1,24 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
-a{
-    text-decoration: none;
-    color:white;
+.one{
+    height:auto;
 }
-.key_specs{
-    list-style-type: disc;
-    font-size: 17px;
-    line-height:26px;
+.two{
+        height:auto;
 }
-.progress{
-    overflow:hidden;
-    display:inline;
+.phone-class{
+    height:500px;
+    width:250px;
+  
+}
+.phone-image{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top:70px;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+.button-box {
+    text-align:center;
+    margin-top:20px;
+ }
+
+.btn{
+    margin:20px;
+    width:200px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+
+@media screen and (min-width:768px) {
+    .one,.two{
+        height:100vh;
+        
+    }
+    .two{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-width:none;
+    }
+  
+}
+.product-content{
+    padding: 2rem 1rem;
+}
+.product-title{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    color: #12263a;
+    margin: 1rem 0;
+    line-height: 40px;
+
+}
+.product-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
     
 }
-.message{
-    line-height:25px;
-    letter-spacing:0.5px;;
-}
-.message-header{
-    line-height:25px;
-    letter-spacing:0.5px;
+.product-price{
+    margin: 1rem 0;
     font-size: 20px;
+    font-weight: 700;
 }
+.product-price span{
+    font-weight: 400;
+}
+.product-detail h2{
+    text-transform: capitalize;
+    color: #12263a;
+    margin-bottom: 0.4rem;
+    font-size: 1.5rem;
+}
+.product-detail p{
+    font-size: 1rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+.product-detail ul{
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+.product-detail ul li{
+    margin: 0;
+    list-style: none;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN9OR84j4pEyCt3S6nCehsiXVgBaNjIqic-SO24uRM9mOqKE1961WIL0Sp3iNxhorNQRI&usqp=CAU) left center no-repeat;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.pro ul li{
+    margin: 0;
+    list-style: none;
+    background: url(https://www.pinclipart.com/picdir/big/12-120767_check-clipart-bullet-point-check-green-png-download.png) left center no-repeat;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.con ul li{
+    margin: 0;
+    list-style: none;
+    background: url(https://freesvg.org/img/milker_X_icon.png) left center no-repeat;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.product-detail ul li span{
+    font-weight: 400;
+}
+.new-price span{
+    color: #256eff;
+}
+
