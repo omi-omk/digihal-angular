@@ -1,0 +1,121 @@
+.card{
+    height :auto;
+    width:100%;
+    margin:auto;
+    box-shadow: 0 14px 20px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    margin-bottom:100px;
+    margin-top:20px;
+}
+.one{
+    height:auto;
+    
+}
+.two{
+    height:auto;
+    
+}
+.phone-class{
+    height:500px;
+    width:250px;
+  
+}
+.phone-image{
+    margin-top:50px;
+    text-align: center;
+   
+}
+.product-content{
+    padding: 2rem 1rem;
+}
+.recommendation-heading{
+    position: relative;
+    color: #12263a;
+    line-height: 40px;
+    padding:10px;
+    margin-left: 20px;
+    text-align:center;
+    font-size: 30px;
+    font-weight: 700; color:#202020;
+    text-transform: uppercase;
+    word-spacing: 1px; letter-spacing:2px;
+}
+
+hr{
+    height:3px; 
+    width:30%; 
+    border-width:0; 
+    color:rgb(80, 78, 78); 
+    background-color:rgb(102, 101, 101);
+    margin:auto;
+}
+.product-title{
+    font-size: 2.6rem;
+    text-transform: capitalize;
+    font-weight: 550;
+    position: relative;
+    color: #12263a;
+    margin: 1rem 0;
+    line-height: 40px;
+
+}
+.product-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+}
+.product-price{
+    margin: 1rem 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.product-price span{
+    font-weight: 400;
+}
+.product-detail h2{
+    text-transform: capitalize;
+    color: #12263a;
+    margin-bottom: 0.4rem;
+    font-size: 1.5rem;
+}
+
+.product-detail p{
+    font-size: 1rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+    font-weight:600;
+    color:black;
+}
+.product-detail ul{
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+.product-detail ul li{
+    margin: 0;
+    list-style: none;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN9OR84j4pEyCt3S6nCehsiXVgBaNjIqic-SO24uRM9mOqKE1961WIL0Sp3iNxhorNQRI&usqp=CAU) left center no-repeat;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 500;
+    opacity: 0.9;
+}
+.button-box {
+    text-align:center;
+    margin-top:20px;
+ }
+
+.btn{
+    margin:20px;
+    width:120px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+
+@media screen and (min-width:768px) {
+    .card,.one,.two{
+        height:95vh;
+        
+    }
+}

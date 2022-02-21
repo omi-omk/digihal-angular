@@ -1,0 +1,85 @@
+<div class="container">
+    <h1 class="recommendation-heading">Best Recommended Product</h1>
+    <hr>
+    <div class="card">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-md-push-6">
+            <div class="one">
+                <div class="container-fluid phone-image">
+                    <img src="{{product1.img_links}}" class=" phone-class img-fluid">    
+                </div>
+            </div>
+
+            </div>
+            <div class="col-md-7 col-md-pull-6">
+                <div class="two">
+                    <div class="product-content">
+                        <h2 class="product-title">{{product1.mobiles}}</h2>
+                        <br>
+                        <div class = "product-price">
+                            <p class = "new-price">Price: <span>Rs. {{product1.b_Price}}</span></p>
+                        </div>
+                        <div class="product-detail">
+                            <p>Key Specifications</p>
+                            <ul *ngFor="let in of counter(8) ;let i = index">
+                                <li *ngIf="key_specs_values1[i]!='-'">{{key_specs_keys[i]}} : <span>{{key_specs_values1[i]}}</span></li>
+                            </ul>
+                        </div>
+                        <div class="button-box col-lg-12">
+                            <a href="{{product1.best_buy_links}}" class="btn btn-primary" role="button">Buy Now</a>
+                            <a href="#" class="btn btn-warning" role="button">Compare</a>
+                            <a href="#" class="btn btn-success" role="button">Know More</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <h1 class="recommendation-heading">Alternative Recommended product</h1>
+    <hr>
+    <div class="card">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-md-push-6">
+            <div class="one">
+                <div class="container-fluid phone-image">
+                    <img src="{{product2.img_links}}" class=" phone-class img-fluid">    
+                </div>
+            </div>
+
+            </div>
+            <div class="col-md-7 col-md-pull-6">
+                <div class="two">
+                    <div class="product-content">
+                        <h2 class="product-title">{{product2.mobiles}}</h2>
+                        <br>
+                        <div class = "product-price">
+                            <p class = "new-price">Price: <span>Rs. {{product2.b_Price}}</span></p>
+                        </div>
+                        <div class="product-detail">
+                            <p>Key Specifications</p>
+                            <ul *ngFor="let in of counter(8) ;let i = index">
+                                <li *ngIf="key_specs_values2[i]!='-'">{{key_specs_keys[i]}} : <span>{{key_specs_values2[i]}}</span></li>
+                            </ul>
+                        </div>
+                        <div class="button-box col-lg-12">
+                            <a href="{{product2.best_buy_links}}" class="btn btn-primary" role="button">Buy Now</a>
+                            <a href="#" class="btn btn-warning" role="button">Compare</a>
+                            <a href="#" class="btn btn-success" role="button">Know More</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

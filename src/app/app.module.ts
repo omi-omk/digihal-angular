@@ -18,6 +18,7 @@ import { ImageSliderComponentComponent } from './components/home/image-slider-co
 import { HomePageComponentComponent } from './components/home-page-component/home-page-component.component';
 import { FinalPageComponentComponent } from './components/final-page-component/final-page-component.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { SuggestionsComponentComponent } from './components/suggestions-component/suggestions-component.component';
 
 
 
@@ -33,7 +34,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     ImageSliderComponentComponent,
     HomePageComponentComponent,
     FinalPageComponentComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SuggestionsComponentComponent
   ],
   imports: [
     BrowserModule,
