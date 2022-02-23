@@ -15,7 +15,8 @@ export class ProductDataService {
 
   
   setProduct(data: any){
-    this.product=data;
+    localStorage.setItem('dataSource', JSON.stringify(data));
+    this.product=JSON.parse(localStorage.getItem('dataSource')!);
     console.log("data submitted");
   }
   getProduct(){

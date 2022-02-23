@@ -39,7 +39,7 @@ counter(i: number) {
 
   ngOnInit(): void {
     
-    this.product = this._service.getProduct()
+    this.product = JSON.parse(localStorage.getItem('dataSource')!);
     this.pros = this.product.Pros.split(";")
     this.cons = this.product.Cons.split(";")
 
