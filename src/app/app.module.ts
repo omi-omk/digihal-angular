@@ -19,6 +19,7 @@ import { HomePageComponentComponent } from './components/home-page-component/hom
 import { FinalPageComponentComponent } from './components/final-page-component/final-page-component.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SuggestionsComponentComponent } from './components/suggestions-component/suggestions-component.component';
+import { ComparisonComponentComponent } from './components/comparison-component/comparison-component.component';
 
 
 
@@ -35,7 +36,8 @@ import { SuggestionsComponentComponent } from './components/suggestions-componen
     HomePageComponentComponent,
     FinalPageComponentComponent,
     NotFoundComponent,
-    SuggestionsComponentComponent
+    SuggestionsComponentComponent,
+    ComparisonComponentComponent
   ],
   imports: [
     BrowserModule,

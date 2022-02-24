@@ -29,10 +29,13 @@
                         </div>
                         <div class="button-box col-lg-12">
                             <a href="{{product1.best_buy_links}}" class="btn btn-primary" role="button">Buy Now</a>
-                            <a href="#" class="btn btn-warning" role="button">Compare</a>
-                            <a href="#" class="btn btn-success" role="button">Know More</a>
+                            <a routerLink="../compare" class="btn btn-warning" role="button">Compare</a>
+                            <a routerLink="../finalOutput" 
+                            class="btn btn-success"  
+                            role="button"
+                            (click)="changeChoice(0)"
+                            >Know More</a>
                         </div>
-                    </div>
                     
                 </div>
 
@@ -71,8 +74,12 @@
                         </div>
                         <div class="button-box col-lg-12">
                             <a href="{{product2.best_buy_links}}" class="btn btn-primary" role="button">Buy Now</a>
-                            <a href="#" class="btn btn-warning" role="button">Compare</a>
-                            <a href="#" class="btn btn-success" role="button">Know More</a>
+                            <a routerLink="../compare" class="btn btn-warning" role="button">Compare</a>
+                            <a routerLink="../finalOutput" 
+                            class="btn btn-success" 
+                            role="button"
+                            (click)="changeChoice(1)"
+                        >Know More</a>
                         </div>
                     </div>
                     

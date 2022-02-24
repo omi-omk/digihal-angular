@@ -1,5 +1,5 @@
 mat-slider.form-control{
-    border:none
+    border:none;
 }
 hr{
     border:2px solid black;
@@ -10,10 +10,11 @@ mat-slider.form-control:focus{
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
+    
 }
 
 .example-list {
-    width: 1000px;
+    width: 50vw;
     max-width: 100%;
     border: solid 1px #ccc;
     min-height: 60px;
@@ -38,6 +39,7 @@ mat-slider.form-control:focus{
     font-size: 14px;
     flex-grow: 1;
     flex-basis: 0;
+    width:100%;
   }
   
   .cdk-drag-preview {

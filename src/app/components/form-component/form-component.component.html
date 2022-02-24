@@ -19,7 +19,7 @@
             <div class="alert alert-danger" *ngIf="email.errors?.['required']">Email is required</div>
             <div class="alert alert-danger" *ngIf="email.errors?.['pattern']">Please provide a valid email address</div>
         </div>
-        <hr>
+       <br>
         <div>
             <p>On the scale of 1-10 enter your requirements for the following:</p>
         </div>
@@ -126,7 +126,7 @@
             value = 1
             required></mat-slider>
         </div>
-        <hr>
+        
         <br>
         <div class="form-group">
             <label for="price">Price: </label>
@@ -141,6 +141,7 @@
             ngModel
             required>
         </div>
+        <br>
         <div *ngIf="price.errors && price.touched">
             <div class="alert alert-danger" *ngIf="price.errors?.['required']">Price is required</div>
             <div class="alert alert-danger" *ngIf="price.errors?.['pattern']">Enter a valid price</div>

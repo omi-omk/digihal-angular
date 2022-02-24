@@ -1,0 +1,14 @@
+<div class = "product-detail">
+    <h2>Specifications: </h2>
+    <table class="basic-table table table-hover container">
+      <tbody>
+        <tr *ngFor='let in of counter(78) ;let i = index'>
+          <td *ngIf="specs1[i]!=undefined &&specs2[i]!=undefined">{{category[i]}}</td>
+          <td *ngIf="specs1[i]!=undefined &&specs2[i]!= undefined">{{specs1[i]}}</td>
+          <td *ngIf="specs1[i]!=undefined &&specs2[i]!=undefined">{{specs2[i]}}</td>
+        </tr>
+      </tbody>
+    </table>          
+
+    
+  </div>
