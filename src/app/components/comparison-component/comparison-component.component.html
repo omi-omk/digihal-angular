@@ -22,9 +22,9 @@
           </td>
         </tr>
         <tr *ngFor='let in of counter(78) ;let i = index'>
-          <td class="category" *ngIf="specs1[i]!=undefined || specs2[i]!=undefined">{{category[i]}}</td>
-          <td class="phone-data" *ngIf="specs1[i]!=undefined || specs2[i]!= undefined" else elseblock1>{{specs1[i]}}</td>
-          <td  class="phone-data" *ngIf="specs1[i]!=undefined || specs2[i]!=undefined" else elseblock2>{{specs2[i]}}</td>
+          <td class="category" *ngIf="specs1[i]!='-' || specs2[i]!='-'">{{category[i]}}</td>
+          <td class="phone-data" *ngIf="specs1[i]!='-' || specs2[i]!= '-'" >{{specs1[i]}}</td>
+          <td  class="phone-data" *ngIf="specs1[i]!='-' || specs2[i]!='-'" >{{specs2[i]}}</td>
 
         </tr>
       </tbody>

@@ -32,13 +32,27 @@ export class ComparisonComponentComponent implements OnInit {
     {
       key = key.split(' ').join('_');
       //console.log(key);
-      this.specs1.push(this.product1[key]);
+      if(this.product1[key]==null)
+      {
+        this.specs1.push('-');
+      }
+      else
+      {
+        this.specs1.push(this.product1[key]);
+      }
     }
     for(let key of this.category)
     {
       key = key.split(' ').join('_');
       //console.log(key);
-      this.specs2.push(this.product2[key]);
+      if(this.product2[key]==null)
+      {
+        this.specs2.push('-');
+      }
+      else
+      {
+        this.specs2.push(this.product2[key]);
+      }
     }
     
   }
