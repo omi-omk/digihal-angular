@@ -21,6 +21,7 @@ export class ComparisonComponentComponent implements OnInit {
         '5G','Supports 4G in India (Band 40)','SIM 2 SIM Type']
   specs1:any[] =[]
   specs2:any[] =[]
+
   counter(i: number) {
     return new Array(i);
   }

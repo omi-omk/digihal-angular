@@ -20,6 +20,7 @@ import { FinalPageComponentComponent } from './components/final-page-component/f
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SuggestionsComponentComponent } from './components/suggestions-component/suggestions-component.component';
 import { ComparisonComponentComponent } from './components/comparison-component/comparison-component.component';
+import { LoadingComponentComponent } from './components/loading-component/loading-component.component';
 
 
 
@@ -37,7 +38,8 @@ import { ComparisonComponentComponent } from './components/comparison-component/
     FinalPageComponentComponent,
     NotFoundComponent,
     SuggestionsComponentComponent,
-    ComparisonComponentComponent
+    ComparisonComponentComponent,
+    LoadingComponentComponent
   ],
   imports: [
     BrowserModule,

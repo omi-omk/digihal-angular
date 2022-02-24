@@ -1,11 +1,31 @@
 <div class = "product-detail">
-    <h2>Specifications: </h2>
+  <h1 class="recommendation-heading">{{product1.mobiles}} Vs. {{product2.mobiles}}</h1>
+    <hr>
     <table class="basic-table table table-hover container">
       <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="phone-img container-fluid"
+            style="background:url({{product1.img_links}}) no-repeat center;
+            background-size: 100% 100%;">
+              
+            </div>
+          </td>
+          <td>
+            <div class="phone-img container-fluid"
+            style="background:url({{product2.img_links}}) no-repeat center;
+            background-size: 100% 100%;">
+              
+            </div>
+          </td>
+        </tr>
         <tr *ngFor='let in of counter(78) ;let i = index'>
-          <td *ngIf="specs1[i]!=undefined &&specs2[i]!=undefined">{{category[i]}}</td>
-          <td *ngIf="specs1[i]!=undefined &&specs2[i]!= undefined">{{specs1[i]}}</td>
-          <td *ngIf="specs1[i]!=undefined &&specs2[i]!=undefined">{{specs2[i]}}</td>
+          <td class="category" *ngIf="specs1[i]!=undefined || specs2[i]!=undefined">{{category[i]}}</td>
+          <td class="phone-data" *ngIf="specs1[i]!=undefined || specs2[i]!= undefined" else elseblock1>{{specs1[i]}}</td>
+          <td  class="phone-data" *ngIf="specs1[i]!=undefined || specs2[i]!=undefined" else elseblock2>{{specs2[i]}}</td>
+
         </tr>
       </tbody>
     </table>          

@@ -19,7 +19,6 @@ counter(i: number) {
   return new Array(i);
 }
 
-
  
   changeChoice(value:any){
     localStorage.setItem('choice',value);
