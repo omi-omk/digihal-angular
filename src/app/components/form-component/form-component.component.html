@@ -142,9 +142,10 @@
             required>
         </div>
         <br>
-        <div *ngIf="price.errors && price.touched">
+        <div *ngIf="price.touched ">
             <div class="alert alert-danger" *ngIf="price.errors?.['required']">Price is required</div>
             <div class="alert alert-danger" *ngIf="price.errors?.['pattern']">Enter a valid price</div>
+            <div class="alert alert-danger" *ngIf="pricelow">Enter price more than 7499</div>
         </div>
         <pre></pre>
         <div 

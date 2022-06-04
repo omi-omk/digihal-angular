@@ -10,6 +10,7 @@ import {Router} from '@angular/router';
 })
 export class FormComponentComponent implements OnInit {
   public response:any;
+  pricelow= false;
   constructor(private _service:ProductDataService, private route:Router) { }
 
   ngOnInit(): void {
@@ -36,6 +37,14 @@ parameters = [
 
 
 submit(data: any){
+  const number = Number(data.form.controls.price.value);
+  
+  if (number<7500)
+  {
+    this.pricelow = true;
+    this.route.navigate(['/input']);
+    return;
+  }
   const priority = new Map<string,number>()
   for(let i=0; i<6;i++)
   {

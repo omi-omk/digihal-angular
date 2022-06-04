@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <form #data = "ngForm" (ngSubmit)="submit(data)" class="form-signin">       
+      <h2 class="form-signin-heading">Admin login</h2>
+      <input type="text"  class="form-control" name="username" placeholder="Email Address" ngModel required autofocus="" />
+      <input type="password" class="form-control" name="password" placeholder="Password" ngModel required/>      
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+      </label>
+      <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+      <div *ngIf="alert" class="alert alert-danger" role="alert">
+        Invalid Credentials
+      </div>
+    </form>
+  </div>
+  

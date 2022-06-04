@@ -1,0 +1,65 @@
+<br>
+<br>
+<div class="jumbotron jumbotron-fluid" style="text-align: center;">
+  <div class="container">
+    <h1 class="display-4">Add Product Form</h1>
+  </div>
+</div>
+<form #data = "ngForm" (ngSubmit)="submit(data)" >
+    <br>
+    <br>
+    <div class="form-group">
+      <input style="text-align: center;" type="text" name="mobiles" ngModel required class="form-control" placeholder="Enter name of the smartphone">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+        <input style="text-align: center;" type="text" name="b_price" ngModel required class="form-control" placeholder="Enter price of the smartphone">
+      </div>
+      <br>
+      <br>
+      <div class="form-group">
+        <input style="text-align: center;" type="text" name="link" ngModel required class="form-control" placeholder="Enter link of the smartphone">
+      </div>
+      <br>
+      <br>
+      <div class="form-group">
+        <input style="text-align: center;" type="text" name="design" ngModel required class="form-control" placeholder="Design">
+      </div>
+      <br>
+      <br>
+      <div class="form-group">
+        <input style="text-align: center;" type="text" name="display" ngModel required class="form-control" placeholder="Display">
+      </div>
+      <br>
+      <br>
+      <div class="form-group">
+        <input style="text-align: center;" type="text" name="software" ngModel required class="form-control" placeholder="Software">
+      </div>
+      <br>
+      <br>
+      <div class="form-group">
+        <input style="text-align: center;" type="text" name="performance" ngModel required class="form-control" placeholder="Performance">
+      </div>
+      <br>
+      <br>
+      <div class="form-group">
+        <input style="text-align: center;" type="text" name="battery" ngModel required class="form-control" placeholder="Battery Life">
+      </div>
+      <br>
+      <br>
+      <div class="form-group">
+        <input style="text-align: center;" type="text" name="camera" ngModel required class="form-control" placeholder="Camera">
+      </div>
+      <br>
+      <br>
+      <div class="form-group">
+        <input style="text-align: center;" type="text" name="value_for_money" ngModel required class="form-control" placeholder="Value for Money">
+      </div>
+      <br>
+      <br>
+      <div>
+        <button type="submit" class="btn btn-primary" style="">Submit</button>
+      </div>
+    
+  </form>

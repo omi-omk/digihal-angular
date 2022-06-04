@@ -1,0 +1,17 @@
+<br>
+<br>
+<div class="jumbotron jumbotron-fluid" style="text-align: center;">
+  <div class="container">
+    <h1 class="display-4">Delete Product Form</h1>
+  </div>
+</div>
+<form #data = "ngForm" (ngSubmit)="submit(data)">
+    <br>
+    <br>
+    <div class="form-group">
+      <input style="text-align: center;" type="text" name="mobiles" ngModel required class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="Enter name of the smartphone you want to delete">
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

@@ -21,6 +21,10 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SuggestionsComponentComponent } from './components/suggestions-component/suggestions-component.component';
 import { ComparisonComponentComponent } from './components/comparison-component/comparison-component.component';
 import { LoadingComponentComponent } from './components/loading-component/loading-component.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { AdminAddComponent } from './components/admin-add/admin-add.component';
+import { AdminDeleteComponent } from './components/admin-delete/admin-delete.component';
 
 
 
@@ -39,7 +43,11 @@ import { LoadingComponentComponent } from './components/loading-component/loadin
     NotFoundComponent,
     SuggestionsComponentComponent,
     ComparisonComponentComponent,
-    LoadingComponentComponent
+    LoadingComponentComponent,
+    AdminDashboardComponent,
+    AdminLoginComponent,
+    AdminAddComponent,
+    AdminDeleteComponent
   ],
   imports: [
     BrowserModule,

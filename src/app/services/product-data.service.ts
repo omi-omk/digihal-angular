@@ -11,6 +11,7 @@ export class ProductDataService {
   public find(product: any):any{
     console.log(product);
     return this._httpClient.post('https://digihal.herokuapp.com/api/',product);
+    // return this._httpClient.post('http://localhost:3000/api/',product);
   }
   product:any
 
